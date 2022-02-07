@@ -8,19 +8,73 @@ This package includes 3 eslint configs:
 
 | import path                         | file        | description                                | 
 | ----------------------------------- | ----------- | ------------------------------------------ |
-| `eslint-config-goodlawyer/backend`  | backend.js  | Backend specific configs                   |
-| `eslint-config-goodlawyer/frontend` | frontend.js | Frontend specific configs                  |
-| `eslint-config-goodlawyer`          | base.js     | Shared configurations for frontend/backend |
+| `@goodlawyer/eslint-config-goodlawyer/backend`  | backend.js  | Backend specific configs                   |
+| `@goodlawyer/eslint-config-goodlawyer/frontend` | frontend.js | Frontend specific configs                  |
+| `@goodlawyer/eslint-config-goodlawyer`          | base.js     | Shared configurations for frontend/backend |
 
 More specific configs all extend from a base config for consistency. Any stack-specific ruleset should go in their respective config files, and any general rulesets that should be shared across all specific configs can go in the base config.
 
+## Installation
 
-## Base ruleset
+### Install Package
 
+`npm install --dev @goodlawyer/eslint-config`
+
+### Install Peer Dependencies
+
+```sh
+npm install --dev eslint prettier
+```
+
+### Create ESLint Config File
+
+Add `.eslintrc` to project root
+
+```json
+{
+  "extends": "@goodlawyer/eslint-config-goodlawyer/backend"
+}
+```
+
+_Use `@goodlawyer/eslint-config-goodlawyer/frontend` for frontend projects_
+
+### Create Prettier Config File
+
+Add `.prettierrc` to project root
+
+```json
+{
+  "printWidth": 120,
+  "singleQuote": true
+}
+```
+
+### Add Scripts
+
+Add scripts for linting and formatting to `package.json`
+
+```json
+"scripts": {
+  "lint": "eslint .",
+  "format": "prettier --write \"**/*.{ts,tsx,js,json,graphql,md}\"",
+  "format:check": "prettier --debug-check \"**/*.{ts,tsx,js,json,graphql,md}\""
+}
+```
+
+### Format Code
+
+If you've added Prettier to an existing project you will want to format all the code before making any further changes. This should also be done in it's own commit. To format the entire codebase run
+
+`npm run format`
+
+
+## Rulesets
+<details> <summary> Base </summary> 
+  
 `base.js`
 
 
-| rule                         | note |
+| Rule                         | Note |
 | ------------------------------ | -----|
 | [prefer-const](https://eslint.org/docs/rules/prefer-const.html)| https://github.com/airbnb/javascript#references--prefer-const
 |[no-var](https://eslint.org/docs/rules/no-var.html)|https://github.com/airbnb/javascript#references--disallow-var
@@ -41,3 +95,4 @@ More specific configs all extend from a base config for consistency. Any stack-s
 |||
 |[import/first](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/first.md)||
 
+ </details>
