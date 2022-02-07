@@ -23,7 +23,7 @@ More specific configs all extend from a base config for consistency. Any stack-s
 ### Install Peer Dependencies
 
 ```sh
-npm install --dev eslint prettier
+npm install --dev eslint prettier lint-staged husky
 ```
 
 ### Create ESLint Config File
