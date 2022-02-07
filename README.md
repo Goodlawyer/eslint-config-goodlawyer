@@ -1,10 +1,12 @@
 # eslint-config-goodlawyer
 
-Official Goodlawyer ESLint configuration
+Official Goodlawyer ESLint + Prettier Configurations
 
-
+&nbsp;
 ## Configs
-This package includes 3 eslint configs:
+
+### ESLint
+This package includes 3 ESLint configs:
 
 | import path                         | file        | description                                | 
 | ----------------------------------- | ----------- | ------------------------------------------ |
@@ -13,6 +15,14 @@ This package includes 3 eslint configs:
 | `@goodlawyer/eslint-config`          | base.js     | Shared configurations for frontend/backend |
 
 More specific configs all extend from a base config for consistency. Any stack-specific ruleset should go in their respective config files, and any general rulesets that should be shared across all specific configs can go in the base config.
+
+### Prettier
+This package also includes a shared Prettier config, which can be used among any stack:
+| import path                         | file        | description                                | 
+| ----------------------------------- | ----------- | ------------------------------------------ |
+| `@goodlawyer/eslint-config/prettier`  | prettier.js  | Prettier configs                  |
+
+&nbsp;
 
 ## Installation
 
@@ -25,7 +35,7 @@ More specific configs all extend from a base config for consistency. Any stack-s
 ```sh
 npm install --dev eslint prettier lint-staged husky
 ```
-
+&nbsp;
 ### Create ESLint Config File
 
 
@@ -39,6 +49,17 @@ npm install --dev eslint prettier lint-staged husky
 
 _Use `@goodlawyer/eslint-config/frontend` for frontend projects_
 
+### Add Prettier Config
+
+```jsonc
+{
+  "name": "my-cool-project",
+  "version": "9000.0.1",
+  "prettier": "@goodlawyer/eslint-config/prettier"
+}
+
+```
+&nbsp;
 ### Add Precommit Hook
 
 Add a precommit hook to `package.json` to automatically lint and format any files staged for commit
@@ -84,6 +105,7 @@ To format the entire codebase run
 
 `npm run format`
 
+&nbsp;
 
 ## Rulesets
 <details> <summary> Base </summary> 
