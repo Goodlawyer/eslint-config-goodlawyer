@@ -28,9 +28,10 @@ npm install --dev eslint prettier
 
 ### Create ESLint Config File
 
-Add `.eslintrc` to project root
 
-```json
+
+```jsonc
+// Example using `.eslintrc` in a backend project root
 {
   "extends": "@goodlawyer/eslint-config/backend"
 }
@@ -38,14 +39,28 @@ Add `.eslintrc` to project root
 
 _Use `@goodlawyer/eslint-config/frontend` for frontend projects_
 
-### Create Prettier Config File
+### Add Precommit Hook
 
-Add `.prettierrc` to project root
+Add a precommit hook to `package.json` to automatically lint and format any files staged for commit
 
 ```json
-{
-  "printWidth": 120,
-  "singleQuote": true
+"husky": {
+  "hooks": {
+    "pre-commit": "lint-staged"
+  }
+},
+"lint-staged": {
+  "concurrent": false,
+  "linters": {
+    "*.{ts,tsx,js}": [
+      "eslint --quiet",
+      "git add"
+    ],
+    "*.{ts,tsx,js,json,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
 }
 ```
 
@@ -63,7 +78,9 @@ Add scripts for linting and formatting to `package.json`
 
 ### Format Code
 
-If you've added Prettier to an existing project you will want to format all the code before making any further changes. This should also be done in it's own commit. To format the entire codebase run
+If you've added Prettier to an existing project you will want to format all the code before making any further changes. This should also be done entirely within in it's own commit. This is to prevent mixing commits that include actual code-changes and formatting changes.
+
+To format the entire codebase run
 
 `npm run format`
 
