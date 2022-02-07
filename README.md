@@ -8,9 +8,9 @@ This package includes 3 eslint configs:
 
 | import path                         | file        | description                                | 
 | ----------------------------------- | ----------- | ------------------------------------------ |
-| `@goodlawyer/eslint-config-goodlawyer/backend`  | backend.js  | Backend specific configs                   |
-| `@goodlawyer/eslint-config-goodlawyer/frontend` | frontend.js | Frontend specific configs                  |
-| `@goodlawyer/eslint-config-goodlawyer`          | base.js     | Shared configurations for frontend/backend |
+| `@goodlawyer/eslint-config/backend`  | backend.js  | Backend specific configs                   |
+| `@goodlawyer/eslint-config/frontend` | frontend.js | Frontend specific configs                  |
+| `@goodlawyer/eslint-config`          | base.js     | Shared configurations for frontend/backend |
 
 More specific configs all extend from a base config for consistency. Any stack-specific ruleset should go in their respective config files, and any general rulesets that should be shared across all specific configs can go in the base config.
 
@@ -32,11 +32,11 @@ Add `.eslintrc` to project root
 
 ```json
 {
-  "extends": "@goodlawyer/eslint-config-goodlawyer/backend"
+  "extends": "@goodlawyer/eslint-config/backend"
 }
 ```
 
-_Use `@goodlawyer/eslint-config-goodlawyer/frontend` for frontend projects_
+_Use `@goodlawyer/eslint-config/frontend` for frontend projects_
 
 ### Create Prettier Config File
 
