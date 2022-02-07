@@ -2,6 +2,8 @@
 
 Official Goodlawyer ESLint configuration
 
+
+## Configs
 This package includes 3 eslint configs:
 
 | import path                         | file        | description                                | 
@@ -11,6 +13,7 @@ This package includes 3 eslint configs:
 | `eslint-config-goodlawyer`          | base.js     | Shared configurations for frontend/backend |
 
 More specific configs all extend from a base config for consistency. Any stack-specific ruleset should go in their respective config files, and any general rulesets that should be shared across all specific configs can go in the base config.
+
 
 ## Base ruleset
 
