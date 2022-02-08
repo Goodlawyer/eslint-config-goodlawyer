@@ -129,12 +129,7 @@ https://nextjs.org/docs/basic-features/eslint#migrating-existing-config
 }
 ```
 
-and add `.next` output to `.prettierignore`:
-
-```
-// .prettierignore
-.next
-```
+Also make sure that build output files are not linted or formatted, see [Usage > Ignore Files](#ignore-files)
 
 &nbsp;
 
@@ -147,6 +142,22 @@ If you've added Prettier to an existing project you will want to format all the 
 To format an entire codebase run
 
 `npm run format`
+
+&nbsp;
+
+## Ignore files
+
+There might be files that do not need linting & formatting, like test files or build outputs:
+
+```
+// .prettierignore
+
+/* Testing frameworks */
+cypress
+
+/* NextJS */
+.next
+```
 
 &nbsp;
 
