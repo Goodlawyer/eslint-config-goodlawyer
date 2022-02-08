@@ -37,7 +37,7 @@ npm install --dev eslint prettier lint-staged husky
 ```
 &nbsp;
 ### Create ESLint Config File
-https://eslint.org/docs/developer-guide/shareable-configs
+https://eslint.org/docs/developer-guide/shareable-configs#using-a-shareable-config
 
 ```jsonc
 // Example using `.eslintrc` in a backend project root
