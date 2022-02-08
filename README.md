@@ -93,7 +93,7 @@ Add a precommit hook to `package.json` to automatically lint and format any file
 }
 ```
 
-- In projects that has many code-smells not fixable by linters, this will be a hindrance.
+*In projects that has many code-smells not fixable by linters, this will be a hindrance.
 
 ### Add Scripts
 
