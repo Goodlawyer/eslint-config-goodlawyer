@@ -31,13 +31,11 @@ This package also includes a shared Prettier config, which can be used among any
 
 ### Install Package
 
-`npm install --dev @goodlawyer/eslint-config`
+`npm install -D @goodlawyer/eslint-config`
 
 ### Install Peer Dependencies
 
-```sh
-npm install -D eslint prettier lint-staged husky
-```
+`npm install -D eslint prettier lint-staged husky`
 
 &nbsp;
 
