@@ -94,8 +94,8 @@ Add scripts for linting and formatting to `package.json`
 ```json
 "scripts": {
   "lint": "eslint .",
-  "format": "prettier --write \"**/*.{ts,tsx,js,json,graphql,md}\"",
-  "format:check": "prettier --debug-check \"**/*.{ts,tsx,js,json,graphql,md}\""
+  "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json}\"",
+  "format:check": "prettier --debug-check \"**/*.{ts,tsx,js,jsx,json}\""
 }
 ```
 
