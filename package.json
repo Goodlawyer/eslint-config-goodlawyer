@@ -1,6 +1,6 @@
 {
 	"name": "@goodlawyer/eslint-config",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"description": "Official Goodlawyer ESLint Configuration",
 	"main": "index.js",
 	"homepage": "https://github.com/Goodlawyer/eslint-config-goodlawyer#readme",

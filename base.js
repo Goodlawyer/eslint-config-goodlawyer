@@ -48,5 +48,6 @@ module.exports = {
 		"no-unneeded-ternary": "warn",
 		"no-unused-vars": "warn",
 		"import/first": ["warn", "absolute-first"],
+		"import/no-unresolved": [1, { caseSensitive: true }],
 	},
 };
