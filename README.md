@@ -44,7 +44,7 @@ This package also includes a shared Prettier config, which can be used among any
 https://eslint.org/docs/developer-guide/shareable-configs#using-a-shareable-config
 
 ```jsonc
-// Example using `.eslintrc` in a backend project root
+// Example using `.eslintrc.json` in a backend project root
 {
 	"extends": "@goodlawyer/eslint-config/backend"
 }
