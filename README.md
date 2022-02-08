@@ -52,6 +52,8 @@ https://eslint.org/docs/developer-guide/shareable-configs#using-a-shareable-conf
 
 _Use `@goodlawyer/eslint-config/frontend` for frontend projects. For special-cases like NextJS, see [Environments > NextJS](#nextjs)._
 
+&nbsp;
+
 ### Add Prettier Config
 
 https://prettier.io/docs/en/configuration.html#sharing-configurations
@@ -67,15 +69,6 @@ https://prettier.io/docs/en/configuration.html#sharing-configurations
 
 &nbsp;
 
-### (Optional) Add .prettierignore
-
-**NextJS**
-
-```
-// .prettierignore
-.next
-```
-
 ### Add Precommit Hook
 
 Add a precommit hook to `package.json` to automatically lint\* and format any files staged for commit
@@ -90,11 +83,11 @@ Add a precommit hook to `package.json` to automatically lint\* and format any fi
 "lint-staged": {
   "concurrent": false,
   "linters": {
-    "*.{ts,tsx,js}": [
+    "*.{ts,tsx,js,jsx}": [
       "eslint --quiet",
       "git add"
     ],
-    "*.{ts,tsx,js,json,md}": [
+    "*.{ts,tsx,js,jsx}": [
       "prettier --write",
       "git add"
     ]
@@ -134,6 +127,13 @@ https://nextjs.org/docs/basic-features/eslint#migrating-existing-config
 {
 	"extends": ["@goodlawyer/eslint-config/frontend", "plugin:@next/next/recommended"]
 }
+```
+
+and add `.next` output to `.prettierignore`:
+
+```
+// .prettierignore
+.next
 ```
 
 &nbsp;
@@ -178,3 +178,11 @@ To format an entire codebase run
 | [import/first](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/first.md)                                                        |                                                                    |
 
  </details>
+
+&nbsp;
+
+#
+
+&nbsp;
+
+Goodlawyer Engineering, MIT License
