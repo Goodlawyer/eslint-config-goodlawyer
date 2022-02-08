@@ -27,7 +27,7 @@ This package also includes a shared Prettier config, which can be used among any
 
 &nbsp;
 
-## Installation
+# Installation
 
 ### Install Package
 
@@ -50,7 +50,7 @@ https://eslint.org/docs/developer-guide/shareable-configs#using-a-shareable-conf
 }
 ```
 
-_Use `@goodlawyer/eslint-config/frontend` for frontend projects_
+_Use `@goodlawyer/eslint-config/frontend` for frontend projects. For special-cases like NextJS, see [Environments > NextJS](#nextjs)._
 
 ### Add Prettier Config
 
@@ -70,14 +70,15 @@ https://prettier.io/docs/en/configuration.html#sharing-configurations
 ### (Optional) Add .prettierignore
 
 **NextJS**
+
 ```
 // .prettierignore
 .next
 ```
 
-### (Optional) Add Precommit Hook\*
+### Add Precommit Hook
 
-Add a precommit hook to `package.json` to automatically lint and format any files staged for commit
+Add a precommit hook to `package.json` to automatically lint\* and format any files staged for commit
 
 ```jsonc
 // package.json
@@ -101,7 +102,7 @@ Add a precommit hook to `package.json` to automatically lint and format any file
 }
 ```
 
-*In projects that has many code-smells not fixable by linters, this will be a hindrance.
+\*In projects that has many code-smells not fixable by linters, this can become problematic as you cannot push without fixing the lint errors. Remove linting but keep formatting if necessary.
 
 &nbsp;
 
@@ -118,17 +119,38 @@ Add scripts for linting and formatting to `package.json`
 }
 ```
 
-### Format Code
+&nbsp;
 
-If you've added Prettier to an existing project you will want to format all the code before making any further changes. This should also be done entirely within in it's own commit. This is to prevent mixing commits that include actual code-changes and formatting changes.
+## Environments
 
-To format the entire codebase run
+### NextJS
+
+NextJS inludes their own ESLint plugin out of the box as of v11. To add this on top of the frontend rules, you must extend from the plugin directly:
+
+https://nextjs.org/docs/basic-features/eslint#migrating-existing-config
+
+```jsonc
+// Example using `.eslintrc.json` in a frontend NextJS project root
+{
+	"extends": ["@goodlawyer/eslint-config/frontend", "plugin:@next/next/recommended"]
+}
+```
+
+&nbsp;
+
+# Usage
+
+## Format Code
+
+If you've added Prettier to an existing project you will want to format all the code before making any further changes. This should also be done entirely within in it's own commit, excluding changes made by installation above. This is to prevent mixing commits that include actual code-changes and formatting changes.
+
+To format an entire codebase run
 
 `npm run format`
 
 &nbsp;
 
-## Rulesets
+# Rulesets
 
 <details> <summary> Base </summary> 
   
