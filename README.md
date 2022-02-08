@@ -59,6 +59,7 @@ _Use `@goodlawyer/eslint-config/frontend` for frontend projects_
 https://prettier.io/docs/en/configuration.html#sharing-configurations
 
 ```jsonc
+// package.json
 {
 	"name": "my-cool-project",
 	"version": "9000.0.1",
@@ -72,7 +73,8 @@ https://prettier.io/docs/en/configuration.html#sharing-configurations
 
 Add a precommit hook to `package.json` to automatically lint and format any files staged for commit
 
-```json
+```jsonc
+// package.json
 "husky": {
   "hooks": {
     "pre-commit": "lint-staged"
@@ -99,7 +101,8 @@ Add a precommit hook to `package.json` to automatically lint and format any file
 
 Add scripts for linting and formatting to `package.json`
 
-```json
+```jsonc
+// package.json
 "scripts": {
   "lint": "eslint .",
   "format": "prettier --write \"**/*.{ts,tsx,js,jsx}\"",
