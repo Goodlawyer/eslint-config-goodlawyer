@@ -27,7 +27,7 @@ This package also includes a shared Prettier config, which can be used among any
 
 &nbsp;
 
-# Installation
+## Installation
 
 ### Install Package
 
@@ -114,9 +114,9 @@ Add scripts for linting and formatting to `package.json`
 
 &nbsp;
 
-## Environments
+### Environments
 
-### NextJS
+#### NextJS
 
 NextJS inludes their own ESLint plugin out of the box as of v11. To add this on top of the frontend rules, you must extend from the plugin directly:
 
@@ -133,9 +133,9 @@ Also make sure that build output files are not linted or formatted, see [Usage >
 
 &nbsp;
 
-# Usage
+## Usage
 
-## Format Code
+### Format Code
 
 If you've added Prettier to an existing project you will want to format all the code before making any further changes. This should also be done entirely within in it's own commit, excluding changes made by installation above. This is to prevent mixing commits that include actual code-changes and formatting changes.
 
@@ -145,7 +145,7 @@ To format an entire codebase run
 
 &nbsp;
 
-## Ignore files
+### Ignore files
 
 There might be files that do not need linting & formatting, like test files or build outputs:
 
@@ -161,7 +161,7 @@ cypress
 
 &nbsp;
 
-# Rulesets
+## Rulesets
 
 <details> <summary> Base </summary> 
   
@@ -193,7 +193,5 @@ cypress
 &nbsp;
 
 #
-
-&nbsp;
 
 Goodlawyer Engineering, MIT License
