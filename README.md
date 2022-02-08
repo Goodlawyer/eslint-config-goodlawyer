@@ -60,7 +60,7 @@ https://prettier.io/docs/en/configuration.html#sharing-configurations
 
 ```
 &nbsp;
-### Add Precommit Hook
+### (Optional) Add Precommit Hook*
 
 Add a precommit hook to `package.json` to automatically lint and format any files staged for commit
 
@@ -84,6 +84,8 @@ Add a precommit hook to `package.json` to automatically lint and format any file
   }
 }
 ```
+
+* In projects that has many code-smells not fixable by linters, this will be a hindrance.
 
 ### Add Scripts
 
