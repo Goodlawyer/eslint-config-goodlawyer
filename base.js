@@ -1,6 +1,7 @@
 module.exports = {
 	extends: ["eslint:recommended", "prettier"],
 	plugins: ["promise", "import"],
+	ignorePatterns: ["node_modules", "*test", "test*"],
 	env: {
 		es6: true,
 		node: true,
@@ -14,6 +15,7 @@ module.exports = {
 		},
 	},
 	rules: {
+		// Inspirations - Airbnb
 		"prefer-const": [
 			"warn",
 			{
@@ -47,6 +49,10 @@ module.exports = {
 		"no-nested-ternary": "warn",
 		"no-unneeded-ternary": "warn",
 		"no-unused-vars": "warn",
+		"object-curly-spacing": ["warn", "always"],
+		// To-taste rules
+		//
+		// Plugins rules
 		"import/first": ["warn", "absolute-first"],
 		"import/no-unresolved": [1, { caseSensitive: true }],
 	},

@@ -1,6 +1,7 @@
 module.exports = {
 	extends: ["./base.js", "plugin:react/jsx-runtime", "plugin:react-hooks/recommended"],
 	plugins: ["react", "react-hooks"],
+	ignorePatterns: [".next/*", "out/*", "cypress/*"],
 	env: {
 		browser: true,
 	},
