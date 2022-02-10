@@ -1,5 +1,5 @@
 module.exports = {
-	extends: ["./base.js", "plugin:react/jsx-runtime", "plugin:react-hooks/recommended"],
+	extends: ["./base.js", "plugin:react/recommended", "plugin:react/jsx-runtime", "plugin:react-hooks/recommended"],
 	plugins: ["react", "react-hooks"],
 	ignorePatterns: [".next/*", "out/*", "cypress/*"],
 	env: {
@@ -11,9 +11,12 @@ module.exports = {
 		},
 	},
 	rules: {
-		"react/no-deprecated": [2],
-		"react/no-direct-mutation-state": [2],
-		"react/prop-types": [0],
-		"react/no-unknown-property": [1],
+		"no-nested-ternary": "off",
+		// Plugins - React
+		"react/no-deprecated": ["error"],
+		"react/no-direct-mutation-state": ["error"],
+		"react/prop-types": ["off"],
+		"react/no-unknown-property": ["warn"],
+		"react/no-unescaped-entities": ["warn"],
 	},
 };

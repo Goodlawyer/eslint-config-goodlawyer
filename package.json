@@ -1,14 +1,11 @@
 {
 	"name": "@goodlawyer/eslint-config",
-	"version": "0.2.0",
+	"version": "0.3.0",
 	"description": "Official Goodlawyer ESLint Configuration",
 	"main": "index.js",
 	"homepage": "https://github.com/Goodlawyer/eslint-config-goodlawyer#readme",
 	"author": "Goodlawyer Engineering <info@goodlawyer.ca>",
 	"license": "MIT",
-	"scripts": {
-		"publish": "npm publish --access public"
-	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/Goodlawyer/eslint-config-goodlawyer.git"
