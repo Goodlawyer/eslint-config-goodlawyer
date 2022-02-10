@@ -1,7 +1,7 @@
 module.exports = {
 	extends: ["eslint:recommended", "prettier"],
 	plugins: ["promise", "import"],
-	ignorePatterns: ["node_modules", "*test", "test*"],
+	ignorePatterns: ["node_modules", "*test", "test*", "*.test.js"],
 	env: {
 		es6: true,
 		node: true,
