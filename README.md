@@ -171,8 +171,8 @@ https://eslint.org/docs/user-guide/configuring/ignoring-code#ignorepatterns-in-c
 ## Publishing
 1. Update the version in package.json
 2. Commit your changes **with a detailed message of what changed**
-3. npm pack --dry-run to see what will be published
-4. npm publish
+3. `npm pack --dry-run` to see what will be published
+4. `npm publish`
 5. (optional) Create a release on GitHub. Use the version as the tag and release name. For example for version 1.0.0 the tag and release name would be v1.0.0. Add the commit details to the release.
 
 &nbsp;
