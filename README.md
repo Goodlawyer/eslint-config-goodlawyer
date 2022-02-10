@@ -23,7 +23,7 @@ More specific configs all extend from a base config for consistency. Any stack-s
 This package also includes a shared Prettier config, which can be used among any stack:
 | import path | file | description |
 | ----------------------------------- | ----------- | ------------------------------------------ |
-| `@goodlawyer/eslint-config/prettier` | prettier.js | Prettier configs |
+| `@goodlawyer/eslint-config/prettier` | prettier.config.cjs | Prettier configs |
 
 &nbsp;
 
