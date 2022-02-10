@@ -39,6 +39,20 @@ This package also includes a shared Prettier config, which can be used among any
 
 &nbsp;
 
+### Add Prettier Config
+
+https://prettier.io/docs/en/configuration.html#sharing-configurations
+
+```jsonc
+// Example using `package.json`
+{
+	...,
+	"prettier": "@goodlawyer/eslint-config/prettier"
+}
+```
+
+&nbsp;
+
 ### Create ESLint Config File
 
 https://eslint.org/docs/developer-guide/shareable-configs#using-a-shareable-config
@@ -51,21 +65,6 @@ https://eslint.org/docs/developer-guide/shareable-configs#using-a-shareable-conf
 ```
 
 _Use `@goodlawyer/eslint-config/frontend` for frontend projects. For special-cases like NextJS, see [Environments > NextJS](#nextjs)._
-
-&nbsp;
-
-### Add Prettier Config
-
-https://prettier.io/docs/en/configuration.html#sharing-configurations
-
-```jsonc
-// package.json
-{
-	"name": "my-cool-project",
-	"version": "9000.0.1",
-	"prettier": "@goodlawyer/eslint-config/prettier"
-}
-```
 
 &nbsp;
 
