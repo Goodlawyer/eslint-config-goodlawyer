@@ -44,7 +44,7 @@ module.exports = {
 		"no-param-reassign": ["warn", { props: true }],
 		"no-duplicate-imports": ["warn", { includeExports: true }],
 		"one-var": ["warn", "never"],
-		"operator-linebreak": ["warn", "before"],
+		// "operator-linebreak": ["warn", "before"],
 		eqeqeq: ["warn", "smart"],
 		"no-nested-ternary": "warn",
 		"no-unneeded-ternary": "warn",
