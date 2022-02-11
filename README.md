@@ -23,7 +23,7 @@ More specific configs all extend from a base config for consistency. Any stack-s
 This package also includes a shared Prettier config, which can be used among any stack:
 | import path | file | description |
 | ----------------------------------- | ----------- | ------------------------------------------ |
-| `@goodlawyer/eslint-config/prettier` | prettier.js | Prettier configs |
+| `@goodlawyer/eslint-config/prettier` | prettier.config.cjs | Prettier configs |
 
 &nbsp;
 
@@ -39,6 +39,20 @@ This package also includes a shared Prettier config, which can be used among any
 
 &nbsp;
 
+### Add Prettier Config
+
+https://prettier.io/docs/en/configuration.html#sharing-configurations
+
+```jsonc
+// Example using `package.json`
+{
+	...,
+	"prettier": "@goodlawyer/eslint-config/prettier"
+}
+```
+
+&nbsp;
+
 ### Create ESLint Config File
 
 https://eslint.org/docs/developer-guide/shareable-configs#using-a-shareable-config
@@ -51,21 +65,6 @@ https://eslint.org/docs/developer-guide/shareable-configs#using-a-shareable-conf
 ```
 
 _Use `@goodlawyer/eslint-config/frontend` for frontend projects. For special-cases like NextJS, see [Environments > NextJS](#nextjs)._
-
-&nbsp;
-
-### Add Prettier Config
-
-https://prettier.io/docs/en/configuration.html#sharing-configurations
-
-```jsonc
-// package.json
-{
-	"name": "my-cool-project",
-	"version": "9000.0.1",
-	"prettier": "@goodlawyer/eslint-config/prettier"
-}
-```
 
 &nbsp;
 
@@ -137,9 +136,13 @@ Also make sure that build output files are not linted or formatted, see [Usage >
 
 ### Format Code
 
-If you've added Prettier to an existing project you will want to format all the code before making any further changes. This should also be done entirely within in it's own commit, excluding changes made by installation above. This is to prevent mixing commits that include actual code-changes and formatting changes.
+If you've added Prettier to an existing project you will want to format all the code before making any further changes. This should also be done entirely within in **it's own commit**, excluding changes made by installation above. This is to prevent mixing commits that include actual code-changes and formatting changes.
 
-To format an entire codebase run
+Before formatting, it's a good idea to run a soft-check to verify the files that will be formatted. This mindful check can verify whether you're ignoring files that should be ignored, before going to CI (ie. tests, build outputs). See [Ignore files](#ignore-files)
+
+`npm run format:check`
+
+To format an entire codebase, run
 
 `npm run format`
 
@@ -147,7 +150,7 @@ To format an entire codebase run
 
 ### Ignore files
 
-There might be files that do not need linting & formatting, like test files or build outputs:
+There might be files that do shouldn't need linting & formatting, like test files or build outputs. You can add a `.prettierignore` at project root to do this:
 
 ```
 // .prettierignore
@@ -159,9 +162,22 @@ cypress
 .next
 ```
 
+If you're needing to do this often, consider adding an `ignorePatterns` config in one of our configs above. 
+
+https://eslint.org/docs/user-guide/configuring/ignoring-code#ignorepatterns-in-config-files
+
 &nbsp;
 
-## Rulesets
+## Publishing
+1. Update the version in package.json
+2. Commit your changes **with a detailed message of what changed**
+3. `npm pack --dry-run` to see what will be published
+4. `npm publish`
+5. (optional) Create a release on GitHub. Use the version as the tag and release name. For example for version 1.0.0 the tag and release name would be v1.0.0. Add the commit details to the release.
+
+&nbsp;
+
+## Rulesets (outdated)
 
 <details> <summary> Base </summary> 
   
