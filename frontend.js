@@ -18,6 +18,6 @@ module.exports = {
 		"react/prop-types": ["off"],
 		"react/no-unknown-property": ["warn"],
 		"react/no-unescaped-entities": ["warn"],
-		"react/no-array-index-key": ["error"],
+		"react/no-array-index-key": ["warn"],
 	},
 };
