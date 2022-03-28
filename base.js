@@ -24,7 +24,7 @@ module.exports = {
 			},
 		],
 		"no-var": "warn",
-		"quote-props": ["warn", "consistent-as-needed"],
+		"quote-props": ["off", "consistent-as-needed"],
 		"prefer-destructuring": [
 			"warn",
 			{
@@ -54,6 +54,6 @@ module.exports = {
 		//
 		// Plugins rules
 		"import/first": ["warn", "absolute-first"],
-		"import/no-unresolved": [1, { caseSensitive: true }],
+		"import/no-unresolved": [2, { caseSensitive: true }],
 	},
 };
