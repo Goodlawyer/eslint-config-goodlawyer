@@ -4,17 +4,6 @@ Official Goodlawyer ESLint + Prettier Configurations
 
 &nbsp;
 
-## Release schedules
-
-We maintain 2 release schedules. Each release schedule contains a different set of configurations.
-
-| type                                   | folder | description                                                                                                                                                  |
-| -------------------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `@goodlawyer/eslint-config/stable/...` | stable | These configs power our current projects. When adding onto an existing app, this is generally used.                                                          |
-| `@goodlawyer/eslint-config/next/...`   | next   | These configs power our new projects. When adding onto a new app, this should be used as this will have the latest best-practices tailored suit to the team. |
-
-&nbsp;
-
 ## Configs
 
 ### ESLint
@@ -23,9 +12,9 @@ For each release schedule, we have 3 ESLint configs: (1 installation)
 
 | import path                | file        | description                                |
 | -------------------------- | ----------- | ------------------------------------------ |
-| `<schedule>/backend`       | backend.js  | Backend specific configs                   |
-| `<schedule>/frontend`      | frontend.js | Frontend specific configs                  |
-| `<schedule>/eslint-config` | base.js     | Shared configurations for frontend/backend |
+| `@goodlawyer/eslint-config/backend`       | backend.js  | Backend specific configs                   |
+| `@goodlawyer/eslint-config/frontend`      | frontend.js | Frontend specific configs                  |
+| `@goodlawyer/eslint-config/eslint-config` | base.js     | Shared configurations for frontend/backend |
 
 More specific configs all extend from a base config for consistency. Any stack-specific ruleset should go in their respective config files, and any general rulesets that should be shared across all specific configs can go in the base config.
 
@@ -34,7 +23,7 @@ More specific configs all extend from a base config for consistency. Any stack-s
 This package also includes a shared Prettier config, which can be used among any stack:
 | import path | file | description |
 | ----------------------------------- | ----------- | ------------------------------------------ |
-| `<schedule>/prettier` | prettier.config.cjs | Prettier configs |
+| `@goodlawyer/eslint-config/prettier` | prettier.config.cjs | Prettier configs |
 
 &nbsp;
 
