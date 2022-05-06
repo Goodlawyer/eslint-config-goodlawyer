@@ -4,6 +4,17 @@ Official Goodlawyer ESLint + Prettier Configurations
 
 &nbsp;
 
+## Release schedules
+
+We maintain 2 release schedules. Each release schedule contains a different set of configurations.
+
+| version tag                                | description                                                                                                                                                  |
+| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| stable | These configs power our current projects. When adding onto an existing app, this is generally used.                                                          |
+| next   | These configs power our new projects. When adding onto a new app, this should be used as this will have the latest best-practices tailored suit to the team. |
+
+&nbsp;
+
 ## Configs
 
 ### ESLint
