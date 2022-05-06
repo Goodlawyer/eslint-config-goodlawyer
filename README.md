@@ -27,8 +27,13 @@ This package also includes a shared Prettier config, which can be used among any
 
 &nbsp;
 
-## Installation
 
+<!-- ============================================================== INSTALLATION =====================================================  -->
+<details>
+	<summary>
+		<h2>Installation</h2> 
+	</summary>
+	
 ### Install Package
 
 `npm install -D @goodlawyer/eslint-config`
@@ -130,9 +135,15 @@ https://nextjs.org/docs/basic-features/eslint#migrating-existing-config
 
 Also make sure that build output files are not linted or formatted, see [Usage > Ignore Files](#ignore-files)
 
-&nbsp;
+</details>
 
-## Usage
+<!-- =========================================================== END OF INSTALLATION ====================================================  -->
+<!-- ============================================================== USAGE =====================================================  -->
+<details>
+	<summary>
+		<h2>Usage</h2>
+	</summary>
+	
 
 ### Format Code
 
@@ -165,16 +176,36 @@ cypress
 If you're needing to do this often, consider adding an `ignorePatterns` config in one of our configs above. 
 
 https://eslint.org/docs/user-guide/configuring/ignoring-code#ignorepatterns-in-config-files
+</details>
 
-&nbsp;
+<!-- ============================================================ END OF USAGE =====================================================  -->
+<!-- ===============================================================DEVELOPMENT=====================================================  -->
+<details>
+	<summary>
+		<h2>Development </h2>
+	</summary>
+	
+TODO
 
-## Publishing
+</details>
+<!-- ============================================================ END OF DEVELOPMENT ===============================================  -->
+<!-- ============================================================== PUBLISHING ====================================================  -->
+<details>
+	<summary>
+		<h2>Publishing</h2>
+	</summary>
+
+
 1. Update the version in package.json
 2. Commit your changes **with a detailed message of what changed**
 3. `npm pack --dry-run` to see what will be published
 4. `npm publish`
 5. (optional) Create a release on GitHub. Use the version as the tag and release name. For example for version 1.0.0 the tag and release name would be v1.0.0. Add the commit details to the release.
 
+</details>
+
+<!-- ========================================================== END OF PUBLISHING =====================================================  -->
+<!-- ============================================================== RULESETS ====================================================  -->
 &nbsp;
 
 ## Rulesets (outdated)
@@ -206,6 +237,8 @@ https://eslint.org/docs/user-guide/configuring/ignoring-code#ignorepatterns-in-c
 | [import/first](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/first.md)                                                        |                                                                    |
 
  </details>
+ 
+<!-- ========================================================== END OF PUBLISHING =====================================================  -->
 
 &nbsp;
 
