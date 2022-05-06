@@ -1,5 +1,16 @@
+/**
+ * ========================================================
+ * =============== NEXT Release schedule ================
+ * ========================================================
+ */
+
 module.exports = {
-	extends: ["./base.js", "plugin:react/recommended", "plugin:react/jsx-runtime", "plugin:react-hooks/recommended"],
+	extends: [
+		"./base.js",
+		"plugin:react/recommended",
+		"plugin:react/jsx-runtime",
+		"plugin:react-hooks/recommended",
+	],
 	plugins: ["react", "react-hooks"],
 	ignorePatterns: [".next/*", "out/*", "cypress/*"],
 	env: {

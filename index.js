@@ -5,6 +5,6 @@
  */
 
 /**
- * '@goodlawyer/eslint-config/next/prettier'
+ * '@goodlawyer/eslint-config'
  */
-module.exports = require("./prettier.config.cjs")
+module.exports = require("./base");
