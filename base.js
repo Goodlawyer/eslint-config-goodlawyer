@@ -1,3 +1,9 @@
+/**
+ * ========================================================
+ * =============== NEXT Release schedule ================
+ * ========================================================
+ */
+
 module.exports = {
 	extends: ["eslint:recommended", "prettier"],
 	plugins: ["promise", "import"],
@@ -45,7 +51,7 @@ module.exports = {
 		"no-duplicate-imports": ["warn", { includeExports: true }],
 		"one-var": ["warn", "never"],
 		// "operator-linebreak": ["warn", "before"],
-		eqeqeq: ["warn", "smart"],
+		"eqeqeq": ["warn", "smart"],
 		"no-nested-ternary": "warn",
 		"no-unneeded-ternary": "warn",
 		"no-unused-vars": "warn",
