@@ -54,7 +54,7 @@ module.exports = {
 		"eqeqeq": ["warn", "smart"],
 		"no-nested-ternary": "warn",
 		"no-unneeded-ternary": "warn",
-		"no-unused-vars": "warn",
+		"no-unused-vars": "error",
 		"object-curly-spacing": ["warn", "always"],
 		// To-taste rules
 		//
