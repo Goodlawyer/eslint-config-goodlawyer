@@ -1,6 +1,6 @@
 {
 	"name": "@goodlawyer/eslint-config",
-	"version": "1.0.1",
+	"version": "1.1.0",
 	"description": "Official Goodlawyer ESLint Configuration",
 	"main": "index.js",
 	"homepage": "https://github.com/Goodlawyer/eslint-config-goodlawyer#readme",
@@ -24,6 +24,7 @@
 		"lint-staged": "^12.3.3"
 	},
 	"dependencies": {
+		"@typescript-eslint/parser": "^5.23.0",
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-import": "^2.25.4",
 		"eslint-plugin-promise": "^6.0.0",

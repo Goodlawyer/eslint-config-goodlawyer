@@ -15,11 +15,11 @@ We maintain 2 release schedules. Each release schedule contains a different set 
 
 &nbsp;
 
-## Configs
+## Configs (next release)
 
 ### ESLint
 
-For each release schedule, we have 3 ESLint configs: (1 installation)
+For our **next** release schedule, we have 3 ESLint configs: (1 installation)
 
 | import path                | file        | description                                |
 | -------------------------- | ----------- | ------------------------------------------ |
@@ -35,6 +35,15 @@ This package also includes a shared Prettier config, which can be used among any
 | import path | file | description |
 | ----------------------------------- | ----------- | ------------------------------------------ |
 | `@goodlawyer/eslint-config/prettier` | prettier.config.cjs | Prettier configs |
+
+### Typescript
+
+For TypeScript support, we use [@typescript-eslint/parser](https://github.com/typescript-eslint/typescript-eslint):
+
+| import path | file | description |
+| ----------------------------------- | ----------- | ------------------------------------------ |
+| `@goodlawyer/eslint-config/typescript` | typescript | TypeScript ESLint parser to add TypeScript linting support |
+
 
 &nbsp;
 
@@ -144,6 +153,27 @@ https://nextjs.org/docs/basic-features/eslint#migrating-existing-config
 ```
 
 Also make sure that build output files are not linted or formatted, see [Usage > Ignore Files](#ignore-files)
+
+
+### TypeScript
+
+When using this on a TypeScript project, we need to tell ESLint to use a different parser.
+Our `@goodlawyer/eslint-config/typescript` config does this for us which we can use by explicitly stating we want to extend from it, on top of which config we want to use:
+
+```jsonc
+// Example using `.eslintrc.json` in a frontend NextJS project root
+{
+	"extends": ["@goodlawyer/eslint-config/typescript", "@goodlawyer/eslint-config/frontend", "plugin:@next/next/recommended"]
+}
+```
+
+```jsonc
+// Example using `.eslintrc.json` in a backend project root
+{
+	"extends": ["@goodlawyer/eslint-config/typescript", "@goodlawyer/eslint-config/backend"]
+}
+```
+
 
 </details>
 
