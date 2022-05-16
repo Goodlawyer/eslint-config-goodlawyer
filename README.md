@@ -158,22 +158,30 @@ Also make sure that build output files are not linted or formatted, see [Usage >
 ### TypeScript
 
 When using this on a TypeScript project, we need to tell ESLint to use a different parser.
-Our `@goodlawyer/eslint-config/typescript` config does this for us which we can use by explicitly stating we want to extend from it, on top of which config we want to use:
+Our `@goodlawyer/eslint-config/typescript` config does this for us and more, which we can use by explicitly stating we want to extend from it, **on top** of whatever config we want to use:
+	
+As a rule of thumb, the TypeScript configuration should be the **last extension from our own configs.**
+
+For example, if I wanted to use NextJS' ESLint configuration on a TypeScript project, my `extends` usage order would be:
+ 1. Goodlawyer frontend config
+ 2. Goodlawyer TypeScript config
+ 3. NextJS' recommended config
+
+in that order. This ensures that the framework's (NextJS) recommended config takes the highest precedence, with our TS config next then our "stack-specific" config.
 
 ```jsonc
 // Example using `.eslintrc.json` in a frontend NextJS project root
 {
-	"extends": ["@goodlawyer/eslint-config/typescript", "@goodlawyer/eslint-config/frontend", "plugin:@next/next/recommended"]
+	"extends": ["@goodlawyer/eslint-config/frontend", "@goodlawyer/eslint-config/typescript", "plugin:@next/next/recommended"]
 }
 ```
 
 ```jsonc
 // Example using `.eslintrc.json` in a backend project root
 {
-	"extends": ["@goodlawyer/eslint-config/typescript", "@goodlawyer/eslint-config/backend"]
+	"extends": ["@goodlawyer/eslint-config/backend", "@goodlawyer/eslint-config/typescript"]
 }
 ```
-
 
 </details>
 
