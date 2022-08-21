@@ -31,21 +31,12 @@ module.exports = {
 		],
 		"no-var": "warn",
 		"quote-props": ["off", "consistent-as-needed"],
-		"prefer-destructuring": [
-			"warn",
-			{
-				array: true,
-				object: true,
-			},
-			{
-				enforceForRenamedProperties: false,
-			},
-		],
+		"prefer-destructuring": "off",
 		"prefer-template": "warn",
 		"template-curly-spacing": ["warn", "never"],
 		"no-eval": "warn",
 		"no-loop-func": "warn",
-		"default-param-last": "warn",
+		"default-param-last": "off",
 		"space-before-blocks": ["warn", "always"],
 		"no-param-reassign": ["warn", { props: true }],
 		"no-duplicate-imports": ["warn", { includeExports: true }],
