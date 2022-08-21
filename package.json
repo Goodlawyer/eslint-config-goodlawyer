@@ -1,6 +1,6 @@
 {
 	"name": "@goodlawyer/eslint-config",
-	"version": "1.3.0",
+	"version": "2.0.0",
 	"description": "Official Goodlawyer ESLint Configuration",
 	"main": "index.js",
 	"homepage": "https://github.com/Goodlawyer/eslint-config-goodlawyer#readme",
@@ -17,6 +17,9 @@
 	"bugs": {
 		"url": "https://github.com/Goodlawyer/eslint-config-goodlawyer/issues"
 	},
+	"scripts": {
+		"develop": "npm link"
+	},
 	"peerDependencies": {
 		"eslint": "^8.22.0",
 		"husky": "^8.0.1",
@@ -27,13 +30,14 @@
 		"@typescript-eslint/eslint-plugin": "^5.33.1",
 		"@typescript-eslint/parser": "^5.33.1",
 		"eslint-config-prettier": "^8.5.0",
-		"eslint-plugin-import": "^2.26.0",
+		"eslint-import-resolver-typescript": "^3.4.2",
 		"eslint-plugin-promise": "^6.0.0",
 		"eslint-plugin-react": "^7.30.1",
 		"eslint-plugin-react-hooks": "^4.6.0"
 	},
 	"devDependencies": {
 		"eslint": "^8.22.0",
+		"eslint-plugin-import": "^2.26.0",
 		"prettier": "^2.7.1"
 	},
 	"prettier": "./prettier"
